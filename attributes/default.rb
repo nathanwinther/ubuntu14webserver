@@ -7,6 +7,8 @@ default['ubuntu14webserver']['database']['root_password'] = ''
 default['ubuntu14webserver']['database']['remote_root'] = true
 
 # web
-default['ubuntu14webserver']['web']['apache_run_user'] = 'vagrant'
-default['ubuntu14webserver']['web']['apache_run_group'] = 'vagrant'
+default['ubuntu14webserver']['web']['apache_run_user'] = 'www-data'
+default['ubuntu14webserver']['web']['apache_run_group'] = 'www-data'
+default['ubuntu14webserver']['web']['default_site'] = '000-default'
+default['ubuntu14webserver']['web']['default_site_ssl'] = 'default-ssl'
 
