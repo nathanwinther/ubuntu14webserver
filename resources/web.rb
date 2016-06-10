@@ -13,11 +13,13 @@ action :create do
 
   execute 'mod_rewrite' do
     command 'a2enmod rewrite'
+    notifies :restart, 'service[apache2]'
     action :run
   end
 
   execute 'mod_ssl' do
     command 'a2enmod ssl'
+    notifies :restart, 'service[apache2]'
     action :run
   end
 
