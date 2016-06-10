@@ -35,11 +35,5 @@ action :create do
     notifies :restart, 'service[apache2]'
   end
   
-  execute 'default_site' do
-    command 'a2ensite ' + node['ubuntu14webserver']['web']['default_site']
-    notifies :restart, 'service[apache2]'
-    action :run
-  end
-
 end
 
