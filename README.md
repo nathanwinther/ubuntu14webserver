@@ -2,5 +2,5 @@
 
 ## Chef Cookbook
 
-Create LAMP stack for ubuntu 14.
+Create LAMP stack for ubuntu-14
 
