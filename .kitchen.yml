@@ -3,8 +3,8 @@ driver:
   name: vagrant
   network:
     - ["private_network", {ip: "192.168.34.34"}]
-  synced_folders:
-    - ["tmp", "/var/kitchen"]
+#  synced_folders:
+#    - ["tmp", "/var/kitchen"]
 
 provisioner:
   name: chef_zero
@@ -24,18 +24,18 @@ suites:
   - name: default
     run_list:
       - recipe[ubuntu14webserver::default]
-#    attributes:
-    attributes: {
-        ubuntu14webserver: {
-            database: {
-                bind_address: "0.0.0.0",
-                max_allowed_packet: "64M",
-                root_password: "root",
-                remote_root: true
-            },
-            memcache: {
-                install_memcache: true
-            }
-        }
-    }
+    attributes:
+#    attributes: {
+#        ubuntu14webserver: {
+#            database: {
+#                bind_address: "0.0.0.0",
+#                max_allowed_packet: "64M",
+#                root_password: "root",
+#                remote_root: true
+#            },
+#            memcache: {
+#                install_memcache: true
+#            }
+#        }
+#    }
 
