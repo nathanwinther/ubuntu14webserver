@@ -10,3 +10,6 @@ default['ubuntu14webserver']['database']['remote_root'] = false
 default['ubuntu14webserver']['web']['apache_run_user'] = 'www-data'
 default['ubuntu14webserver']['web']['apache_run_group'] = 'www-data'
 
+# memcache
+default['ubuntu14webserver']['memcache']['install_memcache'] = false
+
