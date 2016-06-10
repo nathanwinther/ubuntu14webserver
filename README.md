@@ -1,4 +1,6 @@
 # ubuntu14webserver
 
-TODO: Enter the cookbook description here.
+## Chef Cookbook
+
+Create LAMP stack for ubuntu 14.
 
