@@ -1,0 +1,7 @@
+name 'ubuntu14webserver'
+maintainer 'Nathan Winther'
+maintainer_email 'hello@nathanwinther.info'
+license 'MIT'
+description 'Installs/Configures ubuntu14webserver'
+long_description 'Installs/Configures ubuntu14webserver'
+version '0.1.0'

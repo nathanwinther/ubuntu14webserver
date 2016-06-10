@@ -1,0 +1,27 @@
+---
+driver:
+  name: vagrant
+  network:
+    - ["private_network", {ip: "192.168.34.34"}]
+  synced_folders:
+    - ["tmp", "/var/kitchen"]
+
+provisioner:
+  name: chef_zero
+
+# Uncomment the following verifier to leverage Inspec instead of Busser (the
+# default verifier)
+# verifier:
+#   name: inspec
+
+platforms:
+  - name: ubuntu-14.04
+    driver:
+      customize:
+        memory: 256
+
+suites:
+  - name: default
+    run_list:
+      - recipe[ubuntu14webserver::default]
+    attributes:
