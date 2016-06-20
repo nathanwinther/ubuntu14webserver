@@ -54,5 +54,18 @@ action :create do
     notifies :restart, 'service[apache2]'
   end
 
+  # mycrypt NOT ENABLED by default. Create symlinks
+  link '/etc/php5/apache2/conf.d/30-mcrypt.ini' do
+    to '../../mods-available/mcrypt.ini'
+    action :create
+    notifies :restart, 'service[apache2]'
+  end
+
+  link '/etc/php5/cli/conf.d/30-mcrypt.ini' do
+    to '../../mods-available/mcrypt.ini'
+    action :create
+    notifies :restart, 'service[apache2]'
+  end
+
 end
 
